@@ -40,6 +40,9 @@ namespace cse210_batter_csharp
                 {
                     _keepPlaying = false;
                 }
+                Ball b = (Ball)_cast["balls"][0];
+                if (!b.GetAlive())
+                    _keepPlaying = false;
             }
 
             Console.WriteLine("Game over!");
