@@ -9,7 +9,7 @@ namespace cse210_batter_csharp.Casting
             SetImage(Constants.IMAGE_BALL);
             _height = Constants.BALL_HEIGHT;
             _width = Constants.BALL_WIDTH;
-            _velocity = new Point(10, -5);
+            _velocity = new Point(Constants.BALL_DX, Constants.BALL_DY);
         }
 
         public void BounceHorizontal()
