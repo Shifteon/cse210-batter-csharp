@@ -36,6 +36,9 @@ namespace cse210_batter_csharp.Scripting
                     _audioService.PlaySound(Constants.SOUND_BOUNCE);
                     ball.BounceVertical();
                     bricksToRemove.Add(brick);
+                    // Add points
+                    ScoreBoard score = (ScoreBoard)cast["scoreboard"][0];
+                    score.AddPoints(5);
                 }
             }
 

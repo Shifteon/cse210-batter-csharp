@@ -131,7 +131,7 @@ namespace cse210_batter_csharp.Services
             }
             else if (actor.HasText())
             {
-                bool darkText = true;
+                bool darkText = false;
                 string text = actor.GetText();
                 DrawText(x, y, text, darkText);
             }

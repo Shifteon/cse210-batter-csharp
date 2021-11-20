@@ -31,6 +31,10 @@ namespace cse210_batter_csharp
             cast["paddle"] = new List<Actor>();
             cast["paddle"].Add(new Paddle(Constants.MAX_X / 2, Constants.MAX_Y - 30));
 
+            // Scoreboard
+            cast["scoreboard"] = new List<Actor>();
+            cast["scoreboard"].Add(new ScoreBoard());
+
             // Create the script
             Dictionary<string, List<Action>> script = new Dictionary<string, List<Action>>();
 
@@ -51,7 +55,6 @@ namespace cse210_batter_csharp
             script["update"].Add(new HandleCollisionsAction(physicsService, audioService));
 
             script["input"].Add(new ControlActorsAction(inputService));
-            // TODO: Add something fun
 
             // Start up the game
             outputService.OpenWindow(Constants.MAX_X, Constants.MAX_Y, "Batter", Constants.FRAME_RATE);
